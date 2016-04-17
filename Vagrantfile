@@ -67,6 +67,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["./cookbooks"]
     chef.add_recipe 'git'
+    chef.add_recipe 'mongodb'
   end
 
   #   sudo apt-get update
